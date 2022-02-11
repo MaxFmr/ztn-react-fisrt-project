@@ -5,6 +5,8 @@ import HomePage from "./components/pages/homepage/homepage.component";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "./App.css";
+
+import Header from "./components/header/header.component";
 import JacketsPage from "./components/pages/jacketspage/jacketspage.component";
 import HatsPage from "./components/pages/hatspage/hatspage.component";
 import MensPage from "./components/pages/menspage/menspage.component";
@@ -17,6 +19,8 @@ class App extends React.Component {
     return (
       <div className="App">
         <Router>
+          <Header />
+
           <Routes>
             <Route exact path="/" element={<HomePage />} />
             <Route exact path="/hats" element={<HatsPage />} />
