@@ -1,4 +1,4 @@
-import "../hatspage/hatspage.styles.scss";
+import "./hatspage.styles.scss";
 
 const HatsPage = () => {
   return <div>Hats</div>;

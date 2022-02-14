@@ -1,4 +1,4 @@
-import "../womenspage/womenspage.styles.scss";
+import "./womenspage.styles.scss";
 
 const WomensPage = () => {
   return <div>WomensPage</div>;
