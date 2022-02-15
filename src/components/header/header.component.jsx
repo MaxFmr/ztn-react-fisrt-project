@@ -4,6 +4,7 @@ import { ReactComponent as Logo } from "/Users/maxime/Desktop/project-1/src/asse
 import { auth } from "../../firebase/firebase.util";
 
 const Header = ({ currentUser }) => {
+  console.log(currentUser);
   return (
     <div className="header">
       <Link className="logo-container" to="/">
