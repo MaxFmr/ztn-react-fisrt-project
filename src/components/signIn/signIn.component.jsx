@@ -51,7 +51,6 @@ class SignIn extends React.Component {
           />
 
           <div className="button">
-            {" "}
             <CustomButton type="submit" value="Submit Form">
               Sign in
             </CustomButton>
