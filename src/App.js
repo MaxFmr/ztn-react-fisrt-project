@@ -6,8 +6,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "./App.css";
 
+// Redux
 import { connect } from "react-redux";
 import { setCurrentUser } from "./redux/user/user.actions";
+
+// -----------------------------------------------------------
+
 import Header from "./components/header/header.component";
 import JacketsPage from "./pages/jacketspage/jacketspage.component";
 import HatsPage from "./pages/hatspage/hatspage.component";
@@ -23,18 +27,20 @@ class App extends React.Component {
   unsubscribeFromAuth = null;
 
   componentDidMount() {
+    const { setCurrentUser } = this.props;
+
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth);
 
         userRef.onSnapshot((snapShot) => {
-          this.props.setCurrentUser({
+          setCurrentUser({
             id: snapShot.id,
             ...snapShot.data(),
           });
         });
       }
-      this.setState({ currentUser: userAuth });
+      setCurrentUser(userAuth);
     });
   }
   componentWillUnmount() {
