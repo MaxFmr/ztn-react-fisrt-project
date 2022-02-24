@@ -11,9 +11,6 @@ const CheckoutPage = ({ cartItems, total }) => {
     <div className="checkout-page">
       <div className="checkout-header">
         <div className="header-block">
-          <span></span>
-        </div>
-        <div className="header-block">
           <span>Product</span>
         </div>
         <div className="header-block">
@@ -34,7 +31,7 @@ const CheckoutPage = ({ cartItems, total }) => {
       })}
       <div className="total">
         {" "}
-        <span>$ {total}</span>
+        <span>TOTAL: ${total}</span>
       </div>
     </div>
   );
