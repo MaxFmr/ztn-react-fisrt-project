@@ -6,7 +6,9 @@ import { connect } from "react-redux";
 
 import { selectCollections } from "../../redux/shop/shop.selectors";
 
-const ShopPage = ({ Collections }) => {
+import { Link } from "react-router-dom";
+
+const ShopPage = () => {
   return (
     <div className="shop-page">
       <CollectionsOverview />
